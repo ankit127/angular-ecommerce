@@ -1,0 +1,31 @@
+<div class="main-container">
+     <div class="section-content section-content-p30">
+         <div class="container-fluid">
+            <div class="row">
+                 
+                  <div *ngFor="let todo of todoArray; let i = index" class="col-md-3">
+                             <div class="product-box  m-5">
+                               <p [hidden]="true">{{ todo.category_id }}</p>
+
+                              <a routerLink="/products/product/{{ todo.my_id }}" >
+                                <img src="{{ todo.url }}" class="img-responsive" style="width: 200px;">
+                              </a>
+                              
+                              <a routerLink="/products/product//{{ todo.my_id }}" style="text-decoration: none;">
+                                <h5 style="font-size: 16px;text-align: center;">{{ todo.name }}</h5>
+                              </a> 
+                              <hr>
+                               <p class="price" style="font-size: 16px;text-align: center;">{{ todo.unit_price | currency:'USD' }}</p>
+                               <button (click)="addToCart(todo)" class="btn btn-primary btn-sm"  style="margin-left: 50px;">Add To Cart</button>
+                             </div>
+                  </div>
+                  <div *ngIf="todoArray?.length == 0" class="alert alert-warning col-md-12" role="alert"> 
+                           No Products Found...
+                  </div>
+            </div>
+         </div>
+     </div> 
+</div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+  <p style="color: white">Please Wait. </p>  
+  </ngx-spinner>   

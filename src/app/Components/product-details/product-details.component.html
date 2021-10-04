@@ -1,0 +1,18 @@
+<div class="detail-section">
+     <div class="container-fluid">
+        <div *ngFor="let to of todo" >     
+        <img src="{{ to.url}}" class="detail-img bg-light" >
+         
+         <h2>{{ todo.name }}</h2>
+         
+         <div class="price" style="margin-left: 180px;">{{ to.unit_price | currency:'USD' }}</div>
+         <button (click)="addToCart(to)" class="btn btn-primary btn-sm" style="margin-left: 160px;">Add To Cart</button>
+         
+         
+         <hr>
+         <h4>Description</h4>
+         <p>{{ to.description }}</p>
+        </div>  
+         <a routerLink="/products">Back To Products List</a>
+     </div>
+</div>

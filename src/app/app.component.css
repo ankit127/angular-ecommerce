@@ -1,0 +1,28 @@
+.container-fluid1{
+    width: 100%;
+    height: 100px;
+    
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+}
+
+.sideBar{
+    width: 200px;
+    float: left;
+
+}
+
+.router{
+    width: 1535.1px;
+    height: 640px;
+    background-color: rgba(47, 91, 117, 0.014);
+}
+
+
+.outlet{
+    width: 1300px;
+    
+}
