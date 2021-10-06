@@ -26,3 +26,9 @@
     width: 1300px;
     
 }
+
+
+a:hover{
+    transform: scale(1.1);
+    transition: linear 2s;
+}
